@@ -11,6 +11,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  color: chartreuse;
 }
 
 h1 {
@@ -52,12 +54,23 @@ ul {
   padding-inline-start: 20px;
 }
 
-* {
-  box-sizing: border-box;
+
+.game-content{
+  display: flex;
+}
+
+.movement-btn{
+  padding: 8px;
+  border-radius: 2px;
+  border: none;
+  background-color: black;
+  border: 1px solid white;
+  color:chartreuse;
+  margin-top: 20px;
 }
 
 .square {
-  background: #fff;
+  background-color: black;
   border: 1px solid #999;
   float: left;
   font-size: 50px;
@@ -69,6 +82,7 @@ ul {
   padding: 0;
   text-align: center;
   width: 100px;
+  color: chartreuse;
 }
 
 .board-row:after {

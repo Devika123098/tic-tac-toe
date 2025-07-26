@@ -22,7 +22,7 @@ else{
 }
   return (
     <>
-    <h1 className="status">{status}</h1>
+    <h2 className="status">{status}</h2>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={()=>handleClick(0)}/>
         <Square value={squares[1]} onSquareClick={()=>handleClick(1)}/>
@@ -64,17 +64,22 @@ export default function Game() {
     }
     return (
       <li key={move}>
-        <button onClick={()=>jumpTo(move)}>{description}</button>
+        <button onClick={()=>jumpTo(move)} className="movement-btn">{description}</button>
       </li>
     )
   })
   return (
     <div className="game">
-      <div className="game-board">
-        <Board isXNext={xIsNext} squares ={currentSquares} onPlay = {handlePlay} />
-      </div>
-      <div className="game-info">
+      <div className="game-section">
+        <h1>Tic Tac Toe</h1>
+        <div className="game-content">
+          <div className="game-board">
+            <Board isXNext={xIsNext} squares ={currentSquares} onPlay = {handlePlay} />
+          </div>
+        <div className="game-info">
         <ol>{moves}</ol>
+      </div>
+        </div>
       </div>
     </div>
   );
